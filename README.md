@@ -50,6 +50,25 @@ Semaphore semaphore = new Semaphore(1, true);
 https://github.com/AnandKumarJha/InterviewPreparation/blob/master/app/src/main/java/com/example/interviewpreparation/thread/ThreadPriority.java
 
 ## Volatile keyword
+ The Java volatile keyword guarantees visibility of changes to variables across threads. This may sound a bit abstract, so let me elaborate.
+
+In a multithreaded application where the threads operate on non-volatile variables, each thread may copy variables from main memory into a CPU cache while working on them, for performance reasons. If your computer contains more than one CPU, each thread may run on a different CPU. That means, that each thread may copy the variables into the CPU cache of different CPUs. 
+ With non-volatile variables there are no guarantees about when the Java Virtual Machine (JVM) reads data from main memory into CPU caches, or writes data from CPU caches to main memory. This can cause several problems which I will explain in the following sections.
+
+Imagine a situation in which two or more threads have access to a shared object which contains a counter variable declared like this:
+
+public class SharedObject {
+
+    public int counter = 0;
+
+}
+
+Imagine too, that only Thread 1 increments the counter variable, but both Thread 1 and Thread 2 may read the counter variable from time to time.
+
+If the counter variable is not declared volatile there is no guarantee about when the value of the counter variable is written from the CPU cache back to main memory. This means, that the counter variable value in the CPU cache may not be the same as in main memory. 
+
+The problem with threads not seeing the latest value of a variable because it has not yet been written back to main memory by another thread, is called a "visibility" problem. The updates of one thread are not visible to other threads. 
+
 https://github.com/AnandKumarJha/InterviewPreparation/blob/master/app/src/main/java/com/example/interviewpreparation/thread/VolatileKeyword.java
 
 ## ThreadPoolExecutor
