@@ -5,9 +5,9 @@ import java.util.Queue;
 import java.util.Random;
 
 class Producer implements Runnable {
-    Queue<Integer> sharedQueue;
-    Random random = new Random();
-    int data;
+    private Queue<Integer> sharedQueue;
+    private Random random = new Random();
+    private int data;
 
     Producer(Queue<Integer> sharedQueue) {
         this.sharedQueue = sharedQueue;
