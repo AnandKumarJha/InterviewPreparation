@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.interviewpreparation">
 
+    <uses-permission android:name="com.myCustomPermission.PERMISSION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
