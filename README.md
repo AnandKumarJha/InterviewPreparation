@@ -90,4 +90,4 @@ https://github.com/AnandKumarJha/InterviewPreparation/blob/master/app/src/main/j
 https://github.com/AnandKumarJha/InterviewPreparation/blob/master/app/src/main/java/com/example/interviewpreparation/thread/SynchronisedExample.java
 
 ## Producer Consumer Problem
-https://github.com/AnandKumarJha/InterviewPreparation/tree/master/app/src/main/java/com/example/interviewpreparation/thread
+https://github.com/AnandKumarJha/InterviewPreparation/blob/master/app/src/main/java/com/example/interviewpreparation/thread/ProducerConsumer.java
